@@ -1,0 +1,6 @@
+#!/bin/bash
+
+script_path=$(realpath "$0")
+script_dir=$(dirname "$script_path")
+
+python3 "$script_dir/ipscan.py" "$@"
