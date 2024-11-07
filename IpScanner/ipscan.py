@@ -93,7 +93,7 @@ class IpScanner:
         for i, (ip, data) in enumerate(responsiveIps.items(), 1):
             url = f"http://{ip}"
             open_ports = ', '.join(str(port) for port in data['open_ports']) if data['open_ports'] else 'None'
-            table.add_row("i", "ip", "url", "open_ports")
+            table.add_row(str(i), str(ip), str(url), str(open_ports))
 
         print()
         print(table)
